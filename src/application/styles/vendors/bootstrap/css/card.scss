@@ -1,0 +1,19 @@
+@import '../../../mixins';
+
+.card,
+.card-header,
+.card-footer {
+  border-color: $border;
+}
+
+.card-header,
+.card-footer,
+.card-body {
+  background: transparent;
+  padding: rem(20) rem(25);
+
+  @media (max-width: $md-max-width) {
+    padding-right: rem(15);
+    padding-left: rem(15);
+  }
+}
