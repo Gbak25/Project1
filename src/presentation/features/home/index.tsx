@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import isEqual from 'react-fast-compare';
+import { mostViewdData, newData } from '../../../infrastructure/data/data';
 import styles from './style.module.scss';
 
 function Home(): JSX.Element {
@@ -15,60 +16,33 @@ function Home(): JSX.Element {
         <div className={styles.newcontainer}>
           <p className={styles.title}> What's New</p>
           <ul>
-            <li className={styles.newitemcontainer}>
-              <img src="Rectangle 35.png" /> afdfdfs
-            </li>
-            <li className={styles.newitemcontainer}>
-              <img src="Rectangle 36.png" /> afdfdfs
-            </li>
-            <li className={styles.newitemcontainer}>
-              <img src="Rectangle 37.png" /> afdfdfs
-            </li>
-            <li className={styles.newitemcontainer}>
-              <img src="Rectangle 35.png" /> afdfdfs
-            </li>
-            <li className={styles.newitemcontainer}>
-              <img src="Rectangle 36.png" /> afdfdfs
-            </li>
-            <li className={styles.newitemcontainer}>
-              <img src="Rectangle 37.png" /> afdfdfs
-            </li>
+            {newData.map((d) => {
+              return (
+                <li key={d.id} className={styles.newitemcontainer}>
+                  <img src={d.thumbnailPath} />
+                  {d.title}
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className={styles.mostcontainer}>
           <p className={styles.title}> Most Viewed</p>
           <ul>
-            <li className={styles.newitemcontainer2}>
-              <img src="R1.png" />
-              <div className={styles.mrspace}>
-                <div>
-                  <p className={styles.title2}>Title</p>
-                  <p className={styles.name}>Name</p>
-                </div>
-                <p className={styles.date}>Date</p>
-              </div>
-            </li>
-
-            <li className={styles.newitemcontainer2}>
-              <img src="R2.png" />
-              <div className={styles.mrspace}>
-                <div>
-                  <p className={styles.title2}>Title</p>
-                  <p className={styles.name}>Name</p>
-                </div>
-                <p className={styles.date}>Date</p>
-              </div>
-            </li>
-            <li className={styles.newitemcontainer2}>
-              <img src="R3.png" />
-              <div className={styles.mrspace}>
-                <div>
-                  <p className={styles.title2}>Title</p>
-                  <p className={styles.name}>Name</p>
-                </div>
-                <p className={styles.date}>Date</p>
-              </div>
-            </li>
+            {mostViewdData.map((d) => {
+              return (
+                <li key={d.id} className={styles.newitemcontainer2}>
+                  <img src={d.thumbnailPath} />
+                  <div className={styles.mrspace}>
+                    <div>
+                      <p className={styles.title2}>{d.title}</p>
+                      <p className={styles.name}>{d.uploaderName}</p>
+                    </div>
+                    <p className={styles.date}>{d.createdAt}</p>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
