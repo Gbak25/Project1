@@ -1,0 +1,109 @@
+.wrapper{
+    position: relative;
+    height: 105vh;
+    overflow-y: hidden;
+}
+
+.herocontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin: 10px 0;
+    background-color: black;
+    width: 100%;
+    height: 150px;
+}
+
+.Group7{
+    align-self: flex-end;
+    width:80px;
+    height: 80px
+}
+
+.testcolor{
+    color: white;
+}
+
+.foryou{
+    align-self: flex-end;
+}
+
+.videocontainer{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.newcontainer{
+    width: 50%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.mostcontainer{
+    width: 50%;
+    height: 100%;
+}
+
+.new{
+    align-self: flex-start;
+    justify-content: space-between;
+}
+
+.title{
+    padding: 24px 0;
+    font-size: 26px;
+    font-weight: 300;
+}
+
+.newitemcontainer{
+    display: flex;
+    margin: 8px 0;
+    border-top: 2.5px #E3E3E3 solid;
+    border-bottom: 2.5px #E3E3E3 solid;
+    padding: 12px;
+    font-size: 16px;
+
+    img{ 
+        margin-right: 8px;
+        width: 250px;
+        height:150px;
+        object-fit: cover; 
+    }
+}
+
+.newitemcontainer2{
+    display: flex;
+    position: relative;
+    margin: 8px 0;
+    padding: 12px;
+
+    img{ 
+        margin-right: 8px;
+        width: 250px;
+        height:150px;
+        object-fit: cover; 
+    }
+
+    .title2{
+        font-size: 30px;
+        font-weight: 250; 
+    }
+
+    .date{
+        font-size: 15px;
+        font-weight: 160; 
+    }
+
+    .name{ 
+        font-size: 20px;
+        font-weight: 170; 
+    }
+}
+
+.mrspace{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 150px;
+}
