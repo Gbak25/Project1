@@ -5,7 +5,6 @@ import styles from './style.module.scss';
 function Home(): JSX.Element {
   return (
     <div className={styles.wrapper}>
-      <img src=".svg" />
       <div className={`${styles.herocontainer} ${styles.testcolor}`}>
         <img src="leftarrow.svg" />
         <img className={styles.Group7} src="Group 7.svg" />
