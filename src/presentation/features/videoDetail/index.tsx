@@ -1,4 +1,6 @@
-import { memo } from 'react';
+import { allData } from '@infrastructure/data/data';
+import type { VideoItemModel } from '@infrastructure/data/models';
+import { memo, useMemo } from 'react';
 import isEqual from 'react-fast-compare';
 
 type VIdeoDetailProps = {
@@ -8,9 +10,13 @@ type VIdeoDetailProps = {
 function VIdeoDetail(props: VIdeoDetailProps): JSX.Element {
   const { videoId } = props;
 
+  const video = useMemo((): VideoItemModel => {
+    return allData.find((d) => d.id === videoId)!;
+  }, []);
+
   return (
     <div>
-      <p>{videoId}</p>
+      <p>{video.videoUrl}</p>
     </div>
   );
 }
