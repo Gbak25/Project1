@@ -1,6 +1,8 @@
+import { mostViewdData, newData } from '@infrastructure/data/data';
+import dayjs from 'dayjs';
+import Link from 'next/link';
 import { memo } from 'react';
 import isEqual from 'react-fast-compare';
-import { mostViewdData, newData } from '../../../infrastructure/data/data';
 import styles from './style.module.scss';
 
 function Home(): JSX.Element {
@@ -18,10 +20,12 @@ function Home(): JSX.Element {
           <ul>
             {newData.map((d) => {
               return (
-                <li key={d.id} className={styles.newitemcontainer}>
-                  <img src={d.thumbnailPath} />
-                  {d.title}
-                </li>
+                <Link key={d.id} href={`/detail/${d.id}`}>
+                  <li className={styles.newitemcontainer}>
+                    <img src={d.thumbnailPath} />
+                    <p>{d.title}</p>
+                  </li>
+                </Link>
               );
             })}
           </ul>
@@ -31,16 +35,20 @@ function Home(): JSX.Element {
           <ul>
             {mostViewdData.map((d) => {
               return (
-                <li key={d.id} className={styles.newitemcontainer2}>
-                  <img src={d.thumbnailPath} />
-                  <div className={styles.mrspace}>
-                    <div>
-                      <p className={styles.title2}>{d.title}</p>
-                      <p className={styles.name}>{d.uploaderName}</p>
+                <Link key={d.id} href={`/detail/${d.id}`}>
+                  <li className={styles.newitemcontainer2}>
+                    <img src={d.thumbnailPath} />
+                    <div className={styles.mrspace}>
+                      <div>
+                        <p className={styles.title2}>{d.title}</p>
+                        <p className={styles.name}>{d.uploaderName}</p>
+                      </div>
+                      <p className={styles.date}>
+                        {dayjs(d.createdAt).format('YYYY-MM-DD')}
+                      </p>
                     </div>
-                    <p className={styles.date}>{d.createdAt}</p>
-                  </div>
-                </li>
+                  </li>
+                </Link>
               );
             })}
           </ul>
