@@ -9,7 +9,7 @@ export const allData: VideoItemModel[] = [
     thumbnailPath: '/Rectangle 35.png',
     profile: {
       id: '1',
-      name: '1',
+      name: 'Dr.Alonso',
       profileUrl:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
     },
@@ -135,7 +135,7 @@ export const mostViewdData: VideoItemModel[] = [
 export const newData: VideoItemModel[] = [
   {
     id: '4',
-    title: '4',
+    title: 'Mechanical usage of surgurical blade',
     uploaderName: '4',
     videoUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
     thumbnailPath: '/R1.png',
