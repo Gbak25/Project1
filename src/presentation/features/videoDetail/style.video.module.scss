@@ -1,0 +1,119 @@
+.divider{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.divider2{
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.commentary{
+    width:55%; 
+}
+
+.profilecontainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.list{
+    padding: 0 3px;
+    width:45%;
+    font-size: 18px;
+}
+
+.profiles{
+    margin-top: 8px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border-radius: 30px;
+    width: 35px;
+    height: 35px;
+}
+
+.displayer{
+    display: flex;
+
+    img {
+        margin:0 3px;
+        margin-top:5px;
+        width:35px;
+        height:35px;
+    }
+}
+
+.dont{
+    padding: 0 20px;
+    font-weight: 80
+}
+
+.newcontainer{
+    width: 50%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.newitemcontainer{
+    display: flex;
+    margin: 8px 0;
+    border-top: 2.5px #E3E3E3 solid;
+    border-bottom: 2.5px #E3E3E3 solid;
+    padding: 12px;
+    font-size: 16px;
+
+    img{ 
+        margin-right: 8px;
+        width: 200px;
+        height: 145px;
+        object-fit: cover; 
+    }
+
+    .title2{
+        font-size: 20px;
+        font-weight: 200; 
+    }
+
+    .date{
+        font-size: 15px;
+        font-weight: 140; 
+    }
+
+    .name{ 
+        font-size: 20px;
+        font-weight: 170; 
+    }
+
+}
+
+.column{
+    display: flex; 
+    flex-direction: column; 
+}
+
+.mrspace{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 150px;
+}
+
+.forlist{
+    padding-bottom: 10px;
+    word-wrap: unset;
+    font-size: 15px;
+
+    img{
+        margin-right: 10px;
+        border-radius: 30px;
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+    }
+
+}
+
+.simple{
+    font-size: 18px;
+    font-weight: 500;
+}
