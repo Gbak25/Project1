@@ -7,6 +7,12 @@ export const allData: VideoItemModel[] = [
     uploaderName: '1',
     videoUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
     thumbnailPath: '/Rectangle 35.png',
+    profile: {
+      id: '1',
+      name: '1',
+      profileUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+    },
     createdAt: new Date(),
   },
   {
@@ -15,6 +21,12 @@ export const allData: VideoItemModel[] = [
     uploaderName: '2',
     videoUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
     thumbnailPath: '/Rectangle 36.png',
+    profile: {
+      id: '1',
+      name: '1',
+      profileUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+    },
     createdAt: new Date(),
   },
   {
@@ -23,6 +35,12 @@ export const allData: VideoItemModel[] = [
     uploaderName: '3',
     videoUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
     thumbnailPath: '/Rectangle 37.png',
+    profile: {
+      id: '1',
+      name: '1',
+      profileUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+    },
     createdAt: new Date(),
   },
   {
@@ -31,6 +49,12 @@ export const allData: VideoItemModel[] = [
     uploaderName: '4',
     videoUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
     thumbnailPath: '/R1.png',
+    profile: {
+      id: '1',
+      name: '1',
+      profileUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+    },
     createdAt: new Date(),
   },
   {
@@ -39,6 +63,12 @@ export const allData: VideoItemModel[] = [
     uploaderName: '5',
     videoUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
     thumbnailPath: '/R2.png',
+    profile: {
+      id: '1',
+      name: '1',
+      profileUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+    },
     createdAt: new Date(),
   },
   {
@@ -47,6 +77,12 @@ export const allData: VideoItemModel[] = [
     uploaderName: '6',
     videoUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
     thumbnailPath: '/R3.png',
+    profile: {
+      id: '1',
+      name: '1',
+      profileUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+    },
     createdAt: new Date(),
   },
 ];
@@ -58,6 +94,12 @@ export const mostViewdData: VideoItemModel[] = [
     uploaderName: '1',
     videoUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
     thumbnailPath: '/Rectangle 35.png',
+    profile: {
+      id: '1',
+      name: '1',
+      profileUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+    },
     createdAt: new Date(),
   },
   {
@@ -66,6 +108,12 @@ export const mostViewdData: VideoItemModel[] = [
     uploaderName: '2',
     videoUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
     thumbnailPath: '/Rectangle 36.png',
+    profile: {
+      id: '1',
+      name: '1',
+      profileUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+    },
     createdAt: new Date(),
   },
   {
@@ -74,6 +122,12 @@ export const mostViewdData: VideoItemModel[] = [
     uploaderName: '3',
     videoUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
     thumbnailPath: '/Rectangle 37.png',
+    profile: {
+      id: '1',
+      name: '1',
+      profileUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+    },
     createdAt: new Date(),
   },
 ];
@@ -85,6 +139,12 @@ export const newData: VideoItemModel[] = [
     uploaderName: '4',
     videoUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
     thumbnailPath: '/R1.png',
+    profile: {
+      id: '1',
+      name: '1',
+      profileUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+    },
     createdAt: new Date(),
   },
   {
@@ -93,6 +153,12 @@ export const newData: VideoItemModel[] = [
     uploaderName: '5',
     videoUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
     thumbnailPath: '/R2.png',
+    profile: {
+      id: '1',
+      name: '1',
+      profileUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+    },
     createdAt: new Date(),
   },
   {
@@ -101,6 +167,12 @@ export const newData: VideoItemModel[] = [
     uploaderName: '6',
     videoUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
     thumbnailPath: '/R3.png',
+    profile: {
+      id: '1',
+      name: '1',
+      profileUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+    },
     createdAt: new Date(),
   },
 ];
