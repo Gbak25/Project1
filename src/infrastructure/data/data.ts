@@ -7,8 +7,16 @@ export const commentData: CommentItemModel[] = [
     profile: {
       id: '1',
       name: 'Dr.Alonso',
+      categories: ['내과', '외과', '이비인후과'],
       profileUrl:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+      followers: 132,
+      hospital: {
+        id: '1',
+        name: 'Hospital Name',
+        latitude: 35.1566928,
+        longitude: 129.0593822,
+      },
     },
   },
   {
@@ -17,8 +25,16 @@ export const commentData: CommentItemModel[] = [
     profile: {
       id: '1',
       name: 'Dr.Alonso',
+      categories: ['내과', '외과', '이비인후과'],
       profileUrl:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+      followers: 132,
+      hospital: {
+        id: '1',
+        name: 'Hospital Name',
+        latitude: 35.1566928,
+        longitude: 129.0593822,
+      },
     },
   },
   {
@@ -27,8 +43,16 @@ export const commentData: CommentItemModel[] = [
     profile: {
       id: '1',
       name: 'Dr.Alonso',
+      categories: ['내과', '외과', '이비인후과'],
       profileUrl:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+      followers: 132,
+      hospital: {
+        id: '1',
+        name: 'Hospital Name',
+        latitude: 35.1566928,
+        longitude: 129.0593822,
+      },
     },
   },
 ];
@@ -43,8 +67,16 @@ export const allData: VideoItemModel[] = [
     profile: {
       id: '1',
       name: 'Dr.Alonso',
+      categories: ['내과', '외과', '이비인후과'],
       profileUrl:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+      followers: 132,
+      hospital: {
+        id: '1',
+        name: 'Hospital Name',
+        latitude: 35.1566928,
+        longitude: 129.0593822,
+      },
     },
     createdAt: new Date(),
   },
@@ -57,8 +89,16 @@ export const allData: VideoItemModel[] = [
     profile: {
       id: '1',
       name: '1',
+      categories: ['내과', '외과', '이비인후과'],
       profileUrl:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+      followers: 132,
+      hospital: {
+        id: '1',
+        name: 'Hospital Name',
+        latitude: 35.1566928,
+        longitude: 129.0593822,
+      },
     },
     createdAt: new Date(),
   },
@@ -71,8 +111,16 @@ export const allData: VideoItemModel[] = [
     profile: {
       id: '1',
       name: '1',
+      categories: ['내과', '외과', '이비인후과'],
       profileUrl:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+      followers: 132,
+      hospital: {
+        id: '1',
+        name: 'Hospital Name',
+        latitude: 35.1566928,
+        longitude: 129.0593822,
+      },
     },
     createdAt: new Date(),
   },
@@ -85,8 +133,16 @@ export const allData: VideoItemModel[] = [
     profile: {
       id: '1',
       name: '1',
+      categories: ['내과', '외과', '이비인후과'],
       profileUrl:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+      followers: 132,
+      hospital: {
+        id: '1',
+        name: 'Hospital Name',
+        latitude: 35.1566928,
+        longitude: 129.0593822,
+      },
     },
     createdAt: new Date(),
   },
@@ -99,8 +155,16 @@ export const allData: VideoItemModel[] = [
     profile: {
       id: '1',
       name: '1',
+      categories: ['내과', '외과', '이비인후과'],
       profileUrl:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+      followers: 132,
+      hospital: {
+        id: '1',
+        name: 'Hospital Name',
+        latitude: 35.1566928,
+        longitude: 129.0593822,
+      },
     },
     createdAt: new Date(),
   },
@@ -113,8 +177,16 @@ export const allData: VideoItemModel[] = [
     profile: {
       id: '1',
       name: '1',
+      categories: ['내과', '외과', '이비인후과'],
       profileUrl:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+      followers: 132,
+      hospital: {
+        id: '1',
+        name: 'Hospital Name',
+        latitude: 35.1566928,
+        longitude: 129.0593822,
+      },
     },
     createdAt: new Date(),
   },
@@ -130,8 +202,16 @@ export const mostViewdData: VideoItemModel[] = [
     profile: {
       id: '1',
       name: '1',
+      categories: ['내과', '외과', '이비인후과'],
       profileUrl:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+      followers: 132,
+      hospital: {
+        id: '1',
+        name: 'Hospital Name',
+        latitude: 35.1566928,
+        longitude: 129.0593822,
+      },
     },
     createdAt: new Date(),
   },
@@ -144,8 +224,16 @@ export const mostViewdData: VideoItemModel[] = [
     profile: {
       id: '1',
       name: '1',
+      categories: ['내과', '외과', '이비인후과'],
       profileUrl:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+      followers: 132,
+      hospital: {
+        id: '1',
+        name: 'Hospital Name',
+        latitude: 35.1566928,
+        longitude: 129.0593822,
+      },
     },
     createdAt: new Date(),
   },
@@ -158,8 +246,16 @@ export const mostViewdData: VideoItemModel[] = [
     profile: {
       id: '1',
       name: '1',
+      categories: ['내과', '외과', '이비인후과'],
       profileUrl:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+      followers: 132,
+      hospital: {
+        id: '1',
+        name: 'Hospital Name',
+        latitude: 35.1566928,
+        longitude: 129.0593822,
+      },
     },
     createdAt: new Date(),
   },
@@ -175,8 +271,16 @@ export const newData: VideoItemModel[] = [
     profile: {
       id: '1',
       name: '1',
+      categories: ['내과', '외과', '이비인후과'],
       profileUrl:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+      followers: 132,
+      hospital: {
+        id: '1',
+        name: 'Hospital Name',
+        latitude: 35.1566928,
+        longitude: 129.0593822,
+      },
     },
     createdAt: new Date(),
   },
@@ -189,8 +293,16 @@ export const newData: VideoItemModel[] = [
     profile: {
       id: '1',
       name: '1',
+      categories: ['내과', '외과', '이비인후과'],
       profileUrl:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+      followers: 132,
+      hospital: {
+        id: '1',
+        name: 'Hospital Name',
+        latitude: 35.1566928,
+        longitude: 129.0593822,
+      },
     },
     createdAt: new Date(),
   },
@@ -203,8 +315,16 @@ export const newData: VideoItemModel[] = [
     profile: {
       id: '1',
       name: '1',
+      categories: ['내과', '외과', '이비인후과'],
       profileUrl:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+      followers: 132,
+      hospital: {
+        id: '1',
+        name: 'Hospital Name',
+        latitude: 35.1566928,
+        longitude: 129.0593822,
+      },
     },
     createdAt: new Date(),
   },
