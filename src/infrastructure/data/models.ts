@@ -4,6 +4,12 @@ export type ProfileModel = {
   profileUrl: string;
 };
 
+export type CommentItemModel = {
+  id: string;
+  text: string;
+  profile: ProfileModel;
+};
+
 export type VideoItemModel = {
   id: string;
   title: string;

@@ -1,4 +1,37 @@
-import type { VideoItemModel } from './models';
+import type { CommentItemModel, VideoItemModel } from './models';
+
+export const commentData: CommentItemModel[] = [
+  {
+    id: '1',
+    text: 'comment message',
+    profile: {
+      id: '1',
+      name: 'Dr.Alonso',
+      profileUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+    },
+  },
+  {
+    id: '2',
+    text: 'comment message',
+    profile: {
+      id: '1',
+      name: 'Dr.Alonso',
+      profileUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+    },
+  },
+  {
+    id: '3',
+    text: 'comment message',
+    profile: {
+      id: '1',
+      name: 'Dr.Alonso',
+      profileUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541',
+    },
+  },
+];
 
 export const allData: VideoItemModel[] = [
   {

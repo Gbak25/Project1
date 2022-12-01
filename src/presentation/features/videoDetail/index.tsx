@@ -1,4 +1,4 @@
-import { allData, newData } from '@infrastructure/data/data';
+import { allData, commentData, newData } from '@infrastructure/data/data';
 import type { VideoItemModel } from '@infrastructure/data/models';
 import dayjs from 'dayjs';
 import Link from 'next/link';
@@ -51,56 +51,20 @@ function VIdeoDetail(props: VIdeoDetailProps): JSX.Element {
             </p>
             <div>
               <ul>
-                <li className={style.forlist}>
-                  {' '}
-                  <div>
-                    <img src={video.thumbnailPath} />
-                    {video.profile.name}
-                  </div>
-                  This is an example text. This is an example text. This is an
-                  example text. This is an example text. This is an example
-                  text. This is an example text. This is an example text. This
-                  is an example text. This is an example text. This is an
-                  example text. This is an example text. This is an example
-                  text. This is an example text. This is an example text. This
-                  is an example text.
-                </li>
-                <li className={style.forlist}>
-                  {' '}
-                  <div>
-                    <img src={video.thumbnailPath} />
-                    {video.profile.name}
-                  </div>
-                  This is an example text. This is an example text. This is an
-                  example text. This is an example text. This is an example
-                  text. This is an example text. This is an example text. This
-                  is an example text. This is an example text. This is an
-                  example text. This is an example text. This is an example
-                  text. This is an example text.
-                </li>
-                <li className={style.forlist}>
-                  {' '}
-                  <div>
-                    <img src={video.thumbnailPath} />
-                    {video.profile.name}
-                  </div>
-                  This is an example text. This is an example text. This is an
-                  example text. This is an example text. This is an example
-                  text. This is an example text. This is an example text. This
-                  is an example text. This is an example text. This is an
-                  example text. This is an example text.
-                </li>
-                <li className={style.forlist}>
-                  {' '}
-                  <div>
-                    <img src={video.thumbnailPath} />
-                    {video.profile.name}
-                  </div>
-                  This is an example text. This is an example text. This is an
-                  example text. This is an example text. This is an example
-                  text. This is an example text. This is an example text. This
-                  is an example text.
-                </li>
+                {commentData.map((d) => {
+                  return (
+                    <li key={d.id} className={style.forlist}>
+                      {' '}
+                      <div>
+                        <Link href={`/profile/${d.profile.id}`}>
+                          <img src={d.profile.profileUrl} />
+                        </Link>
+                        {d.profile.name}
+                      </div>
+                      {d.text}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
