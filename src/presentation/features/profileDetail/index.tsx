@@ -17,7 +17,17 @@ function ProfileDetail(props: ProfileDetailProps): JSX.Element {
   if (!profile) {
     return <p>No profile found</p>;
   }
-  return <div>{profile.name}</div>;
+  return (
+    <div>
+      {profile.name}
+      <a
+        href={`https://www.google.com/maps/place/Cheongmac+Hospital/data=!4m5!3m4!1s0x0:0x82e362f3200ba929!8m2!3d${profile.hospital.latitude}!4d${profile.hospital.longitude}`}
+        rel="noreferrer noopener"
+        target="_blank">
+        Go To Maps
+      </a>
+    </div>
+  );
 }
 
 export default memo(ProfileDetail, isEqual);
