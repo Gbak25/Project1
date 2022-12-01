@@ -1,7 +1,17 @@
+export type HospitalModel = {
+  id: string;
+  name: string;
+  latitude: number;
+  longitude: number;
+};
+
 export type ProfileModel = {
   id: string;
   name: string;
+  categories: string[];
   profileUrl: string;
+  followers: number;
+  hospital: HospitalModel;
 };
 
 export type CommentItemModel = {
