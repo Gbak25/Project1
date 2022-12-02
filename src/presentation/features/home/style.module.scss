@@ -12,6 +12,10 @@
     background-color: black;
     width: 100%;
     height: 150px;
+
+    @media (max-width: 576px){
+        display: none;
+    }
 }
 
 .Group7{
@@ -38,11 +42,20 @@
     width: 50%;
     height: 100%;
     overflow-y: scroll;
+
+    @media (max-width: 576px){
+        display:none;
+    }
 }
 
 .mostcontainer{
     width: 50%;
     height: 100%;
+
+    @media (max-width: 576px){
+        width: 100%;
+    }
+
 }
 
 .new{
@@ -54,6 +67,10 @@
     padding: 24px 0;
     font-size: 26px;
     font-weight: 300;
+
+    @media (max-width: 576px){
+        display: none;
+    }
 }
 
 .newitemcontainer{
@@ -70,6 +87,7 @@
         height:150px;
         object-fit: cover; 
     }
+
 }
 
 .newitemcontainer2{
@@ -99,6 +117,33 @@
         font-size: 20px;
         font-weight: 170; 
     }
+
+    @media (max-width: 576px){
+        flex-direction: row-reverse;
+
+        .title2{
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .date{
+            font-size: 12px;
+            font-weight: 200;
+        }
+
+        .name{ 
+            font-size: 15px;
+            font-weight: 100; 
+        }
+
+
+        img{
+            width:130px;
+            height:100px;
+
+        }
+    }
+
 }
 
 .mrspace{
@@ -106,4 +151,10 @@
     flex-direction: column;
     justify-content: space-between; 
     height: 150px;
+
+    @media (max-width: 576px){
+       width: 100%;
+       height: 100px;
+}
+
 }

@@ -22,13 +22,15 @@ function VIdeoDetail(props: VIdeoDetailProps): JSX.Element {
     return <p>No video found</p>;
   }
   return (
-    <div>
-      <ReactPlayer
-        url={video.videoUrl}
-        controls={false}
-        width="100%"
-        height={600}
-      />
+    <div className={style.everything}>
+      <div className={style.videodetail}>
+        <ReactPlayer
+          url={video.videoUrl}
+          controls={false}
+          width="100%"
+          height="100%"
+        />
+      </div>
       <div className={style.divider}>
         <div className={style.commentary}>
           <div className={style.profilecontainer}>
@@ -49,7 +51,13 @@ function VIdeoDetail(props: VIdeoDetailProps): JSX.Element {
               This video is a discussion made over the clinical usage of
               A-deltafiber{' '}
             </p>
-            <div>
+            <div className={style.download}>
+              <div>Like</div>
+              <div>Save</div>
+              <div>Download</div>
+              <div>Others</div>
+            </div>
+            <div className={style.nocomment}>
               <ul>
                 {commentData.map((d) => {
                   return (
@@ -71,7 +79,7 @@ function VIdeoDetail(props: VIdeoDetailProps): JSX.Element {
         </div>
         <div className={style.list}>
           {' '}
-          Recommended videos
+          <p className={style.nana}> Recommended Video</p>
           <ul className={style.column}>
             {newData.map((d) => {
               return (
