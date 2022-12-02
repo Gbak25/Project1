@@ -31,11 +31,14 @@
 
 .newitemcontainer{
     display: flex;
+    flex-basis:49.5%;
     margin: 8px 0;
     border-top: 2.5px #E3E3E3 solid;
     border-bottom: 2.5px #E3E3E3 solid;
     padding: 12px;
+    width: 49.5%;
     font-size: 16px;
+    
 
     img{ 
         margin-right: 8px;
@@ -62,5 +65,15 @@
 }
 
 .videolist {
-    column-count: 2;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:100%;
+}
+
+.mrspace{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 150px;
 }
