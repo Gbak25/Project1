@@ -7,9 +7,10 @@
 .herocontainer {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
+    transition: all 0.5s ; 
     margin: 10px 0;
-    background-color: black;
+    background: url('/Rectangle 35.png') no-repeat center center / cover; 
     width: 100%;
     height: 150px;
 
@@ -19,9 +20,14 @@
 }
 
 .Group7{
+    display: flex;
     align-self: flex-end;
-    width:80px;
-    height: 80px
+
+    img{
+        width: 32px;
+        height: 32px;
+    }
+
 }
 
 .testcolor{

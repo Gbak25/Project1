@@ -2,7 +2,7 @@ import { allData, commentData, newData } from '@infrastructure/data/data';
 import type { VideoItemModel } from '@infrastructure/data/models';
 import dayjs from 'dayjs';
 import Link from 'next/link';
-import { memo, useMemo } from 'react';
+import { memo, useMemo, useState } from 'react';
 import isEqual from 'react-fast-compare';
 import ReactPlayer from 'react-player';
 import style from './style.video.module.scss';
@@ -13,6 +13,7 @@ type VIdeoDetailProps = {
 
 function VIdeoDetail(props: VIdeoDetailProps): JSX.Element {
   const { videoId } = props;
+  const [heartClicked, setHeartClicked] = useState(false);
 
   const video = useMemo((): VideoItemModel | undefined => {
     return allData.find((d) => d.id === videoId);
@@ -39,7 +40,10 @@ function VIdeoDetail(props: VIdeoDetailProps): JSX.Element {
               {video.profile.name}{' '}
             </div>
             <div className={style.displayer}>
-              <img src="/heart.svg" />
+              <img
+                src={heartClicked ? '/H.svg' : '/heart.svg'}
+                onClick={() => setHeartClicked((prev) => !prev)}
+              />
               <img src="/save.svg" />
               <img src="/more.svg" />
             </div>
