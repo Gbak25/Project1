@@ -27,6 +27,7 @@ function Home(): JSX.Element {
       imagePath: '/R3.png',
     },
   ]);
+  const [showAd, setShowAd] = useState(true);
 
   const mostViewDynamicData = useMemo((): VideoItemModel[] => {
     if (isMobile && activeMenu === "What's new") {
@@ -35,6 +36,10 @@ function Home(): JSX.Element {
 
     return mostViewdData;
   }, [isMobile, activeMenu]);
+
+  const onCloseClick = () => {
+    setShowAd(false);
+  };
 
   return (
     <div className={styles.wrapper}>
@@ -112,6 +117,18 @@ function Home(): JSX.Element {
             })}
           </ul>
         </div>
+      </div>
+      <div
+        className={`${styles.adBanner} ${
+          showAd ? undefined : styles.invisible
+        }`}>
+        <img className={styles.ad} alt="img_banner" src="/R1.png" />
+        <img
+          className={styles.close}
+          alt="ic_close"
+          src="/ic_close.svg"
+          onClick={onCloseClick}
+        />
       </div>
     </div>
   );

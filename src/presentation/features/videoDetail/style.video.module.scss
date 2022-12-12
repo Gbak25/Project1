@@ -53,7 +53,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        margin-top: 100px;
+        margin-top: 80px;
         height: 300px;
 }
 }
@@ -138,26 +138,26 @@
     padding: 12px;
     font-size: 16px;
 
-    img{ 
+    img{
         margin-right: 8px;
         width: 200px;
         height: 145px;
-        object-fit: cover; 
+        object-fit: cover;
     }
 
     .title2{
         font-size: 20px;
-        font-weight: 200; 
+        font-weight: 200;
     }
 
     .date{
         font-size: 15px;
-        font-weight: 140; 
+        font-weight: 140;
     }
 
-    .name{ 
+    .name{
         font-size: 20px;
-        font-weight: 170; 
+        font-weight: 170;
     }
 
     @media (max-width: 576px){
@@ -168,17 +168,17 @@
 
         .title2{
             font-size: 17px;
-            font-weight: 200; 
+            font-weight: 200;
         }
-    
+
         .date{
             font-size: 12px;
-            font-weight: 140; 
+            font-weight: 140;
         }
-    
-        .name{ 
+
+        .name{
             font-size: 16px;
-            font-weight: 170; 
+            font-weight: 170;
         }
 
     }
@@ -186,19 +186,19 @@
 }
 
 .column{
-    display: flex; 
-    flex-direction: column;     
+    display: flex;
+    flex-direction: column;
 
     @media (max-width: 576px){
-        height: calc(100vh - 640px);
-        overflow-y: scroll; 
+        height: calc(100vh - 500px);
+        overflow-y: scroll;
     }
 }
 
 .mrspace{
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
     height: 150px;
 }
 

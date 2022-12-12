@@ -35,10 +35,10 @@ function VIdeoDetail(props: VIdeoDetailProps): JSX.Element {
       <div className={style.divider}>
         <div className={style.commentary}>
           <div className={style.profilecontainer}>
-            <div>
+            <Link href={`/profile/${video.profile.id}`}>
               <img className={style.profiles} src={video.profile.profileUrl} />{' '}
               {video.profile.name}{' '}
-            </div>
+            </Link>
             <div className={style.displayer}>
               <img
                 src={heartClicked ? '/H.svg' : '/heart.svg'}

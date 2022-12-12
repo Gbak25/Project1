@@ -16,6 +16,10 @@ function ProfileDetail(props: ProfileDetailProps): JSX.Element {
     return allData.find((d) => d.profile.id === profileId)?.profile;
   }, [profileId]);
 
+  const onButtonClick = () => {
+    alert(`You followed ${profile.name}`);
+  };
+
   if (!profile) {
     return <p>No profile found</p>;
   }
@@ -24,7 +28,10 @@ function ProfileDetail(props: ProfileDetailProps): JSX.Element {
       <div className={style.container}>
         <img className={style.profile} src={profile.profileUrl} />
         <div className={style.flex}>
-          <p className={style.font}>{profile.name}</p>
+          <div>
+            <p className={style.font}>{profile.name}</p>
+            <button onClick={onButtonClick}>Follow</button>
+          </div>
           <p> Profession: {`(${profile.categories.join(',')})`}</p>
           <a
             href={`https://www.google.com/maps/place/Cheongmac+Hospital/data=!4m5!3m4!1s0x0:0x82e362f3200ba929!8m2!3d${profile.hospital.latitude}!4d${profile.hospital.longitude}`}

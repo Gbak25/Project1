@@ -1,13 +1,24 @@
+.wrapper {
+    position: relative;
+    height: 110vh;
+    overflow-y: scroll;
+}
+
 .container{
-    display: flex; 
+    display: flex;
     width: 100%
 }
 
-.profile{ 
-    margin-top: 15px; 
+.profile{
+    margin-top: 15px;
     border-radius: 50px;
-    width: 120px; 
+    width: 120px;
     height: 120px;
+
+    @media (max-width: 576px){
+        width: 80px;
+        height: 80px;
+    }
 }
 
 .flex{
@@ -21,6 +32,10 @@
 .font{
     font-size: 35px;
     font-weight: 400;
+
+    @media (max-width: 576px){
+        font-size: 24px;
+    }
 }
 
 .font2{
@@ -38,30 +53,34 @@
     padding: 12px;
     width: 49.5%;
     font-size: 16px;
-    
 
-    img{ 
+
+    img{
         margin-right: 8px;
         width: 200px;
         height: 145px;
-        object-fit: cover; 
+        object-fit: cover;
     }
 
     .title2{
         font-size: 20px;
-        font-weight: 200; 
+        font-weight: 200;
     }
 
     .date{
         font-size: 15px;
-        font-weight: 140; 
+        font-weight: 140;
     }
 
-    .name{ 
+    .name{
         font-size: 20px;
-        font-weight: 170; 
+        font-weight: 170;
     }
 
+    @media (max-width: 576px){
+        flex-basis: 100%;
+        width: 100%;
+    }
 }
 
 .videolist {
@@ -74,6 +93,6 @@
 .mrspace{
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
     height: 150px;
 }
