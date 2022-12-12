@@ -1,11 +1,17 @@
+import { useCheckDevice } from '@application/hooks/use_check_device';
+import { activeNavMenuAtom } from '@application/recoils/navMenu';
 import { mostViewdData, newData } from '@infrastructure/data/data';
+import type { VideoItemModel } from '@infrastructure/data/models';
 import dayjs from 'dayjs';
 import Link from 'next/link';
-import { memo, useState } from 'react';
+import { memo, useMemo, useState } from 'react';
 import isEqual from 'react-fast-compare';
+import { useRecoilValue } from 'recoil';
 import styles from './style.module.scss';
 
 function Home(): JSX.Element {
+  const isMobile = useCheckDevice();
+  const activeMenu = useRecoilValue(activeNavMenuAtom);
   const [activeId, setActiveId] = useState(1);
   const [hero, setHero] = useState([
     {
@@ -21,6 +27,14 @@ function Home(): JSX.Element {
       imagePath: '/R3.png',
     },
   ]);
+
+  const mostViewDynamicData = useMemo((): VideoItemModel[] => {
+    if (isMobile && activeMenu === "What's new") {
+      return newData;
+    }
+
+    return mostViewdData;
+  }, [isMobile, activeMenu]);
 
   return (
     <div className={styles.wrapper}>
@@ -78,7 +92,7 @@ function Home(): JSX.Element {
         <div className={styles.mostcontainer}>
           <p className={styles.title}> Most Viewed</p>
           <ul>
-            {mostViewdData.map((d) => {
+            {mostViewDynamicData.map((d) => {
               return (
                 <Link key={d.id} href={`/detail/${d.id}`}>
                   <li className={styles.newitemcontainer2}>
