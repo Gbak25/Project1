@@ -28,4 +28,6 @@ export type VideoItemModel = {
   thumbnailPath: string;
   profile: ProfileModel;
   createdAt: Date;
+  isNew: boolean;
+  isPopular: boolean;
 };
