@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { useCheckDevice } from '@application/hooks/use_check_device';
 import { activeNavMenuAtom } from '@application/recoils/navMenu';
 import { mostViewdData, newData } from '@infrastructure/data/data';
@@ -9,24 +10,25 @@ import isEqual from 'react-fast-compare';
 import { useRecoilValue } from 'recoil';
 import styles from './style.module.scss';
 
+const hero = [
+  {
+    id: 1,
+    imagePath: '/O.jpg',
+  },
+  {
+    id: 2,
+    imagePath: '/R2.png',
+  },
+  {
+    id: 3,
+    imagePath: '/R3.png',
+  },
+];
+
 function Home(): JSX.Element {
   const isMobile = useCheckDevice();
   const activeMenu = useRecoilValue(activeNavMenuAtom);
   const [activeId, setActiveId] = useState(1);
-  const [hero, setHero] = useState([
-    {
-      id: 1,
-      imagePath: '/O.jpg',
-    },
-    {
-      id: 2,
-      imagePath: '/R2.png',
-    },
-    {
-      id: 3,
-      imagePath: '/R3.png',
-    },
-  ]);
   const [showAd, setShowAd] = useState(true);
 
   const mostViewDynamicData = useMemo((): VideoItemModel[] => {
@@ -37,7 +39,7 @@ function Home(): JSX.Element {
     return mostViewdData;
   }, [isMobile, activeMenu]);
 
-  const onCloseClick = () => {
+  const onCloseClick = (): void => {
     setShowAd(false);
   };
 
@@ -51,8 +53,10 @@ function Home(): JSX.Element {
           })`,
         }}>
         <img
+          role="presentation"
+          alt="arrowleft"
           src="leftarrow.svg"
-          onClick={() =>
+          onClick={(): void =>
             setActiveId((prev) => {
               return prev < 2 ? prev : (prev -= 1);
             })
@@ -69,8 +73,10 @@ function Home(): JSX.Element {
           })}
         </div>
         <img
+          role="presentation"
+          alt="arrow"
           src="arrow.svg"
-          onClick={() =>
+          onClick={(): void =>
             setActiveId((prev) => {
               return prev > 2 ? 1 : (prev += 1);
             })
@@ -80,7 +86,7 @@ function Home(): JSX.Element {
 
       <div className={styles.videocontainer}>
         <div className={styles.newcontainer}>
-          <p className={styles.title}> What's New</p>
+          <p className={styles.title}>What&apos;s New</p>
           <ul>
             {newData.map((d) => {
               return (
@@ -124,6 +130,7 @@ function Home(): JSX.Element {
         }`}>
         <img className={styles.ad} alt="img_banner" src="/R1.png" />
         <img
+          role="presentation"
           className={styles.close}
           alt="ic_close"
           src="/ic_close.svg"
