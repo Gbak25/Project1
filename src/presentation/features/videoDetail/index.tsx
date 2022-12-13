@@ -19,6 +19,22 @@ function VIdeoDetail(props: VIdeoDetailProps): JSX.Element {
     return allData.find((d) => d.id === videoId);
   }, [videoId]);
 
+  const onLikeClick = (): void => {
+    alert(`You Liked ${video?.profile.name}`);
+  };
+
+  const onSaveClick = (): void => {
+    alert(`You've saved ${video?.profile.name}'s video`);
+  };
+
+  const onDownloadClick = (): void => {
+    alert(`You've downloaded ${video?.profile.name}'s video`);
+  };
+
+  const onOthersClick = (): void => {
+    alert(`Others`);
+  };
+
   if (!video) {
     return <p>No video found</p>;
   }
@@ -41,8 +57,10 @@ function VIdeoDetail(props: VIdeoDetailProps): JSX.Element {
             </Link>
             <div className={style.displayer}>
               <img
+                role="presentation"
+                alt="heart"
                 src={heartClicked ? '/H.svg' : '/heart.svg'}
-                onClick={() => setHeartClicked((prev) => !prev)}
+                onClick={(): void => setHeartClicked((prev) => !prev)}
               />
               <img src="/save.svg" />
               <img src="/more.svg" />
@@ -56,10 +74,18 @@ function VIdeoDetail(props: VIdeoDetailProps): JSX.Element {
               A-deltafiber{' '}
             </p>
             <div className={style.download}>
-              <div>Like</div>
-              <div>Save</div>
-              <div>Download</div>
-              <div>Others</div>
+              <div role="presentation" onClick={onLikeClick}>
+                Like
+              </div>
+              <div role="presentation" onClick={onSaveClick}>
+                Save
+              </div>
+              <div role="presentation" onClick={onDownloadClick}>
+                Download
+              </div>
+              <div role="presentation" onClick={onOthersClick}>
+                Others
+              </div>
             </div>
             <div className={style.nocomment}>
               <ul>

@@ -16,8 +16,8 @@ function ProfileDetail(props: ProfileDetailProps): JSX.Element {
     return allData.find((d) => d.profile.id === profileId)?.profile;
   }, [profileId]);
 
-  const onButtonClick = () => {
-    alert(`You followed ${profile.name}`);
+  const onButtonClick = (): void => {
+    alert(`You followed ${profile?.name}`);
   };
 
   if (!profile) {
@@ -30,7 +30,9 @@ function ProfileDetail(props: ProfileDetailProps): JSX.Element {
         <div className={style.flex}>
           <div>
             <p className={style.font}>{profile.name}</p>
-            <button onClick={onButtonClick}>Follow</button>
+            <button type="button" onClick={onButtonClick}>
+              Follow
+            </button>
           </div>
           <p> Profession: {`(${profile.categories.join(',')})`}</p>
           <a
