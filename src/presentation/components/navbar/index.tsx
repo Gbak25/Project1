@@ -54,7 +54,7 @@ function Navbar(): JSX.Element {
                 role="presentation"
                 onClick={(): void => onMenuClick(m)}
                 className={`${
-                  isMobile && activeMenu === m ? styles.activeMenu : undefined
+                  activeMenu === m ? styles.activeMenu : undefined
                 }`}>
                 {m}
               </li>
