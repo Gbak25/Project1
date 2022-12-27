@@ -1,14 +1,20 @@
 import { useCheckDevice } from '@application/hooks/use_check_device';
-import { activeNavMenuAtom, navMenuAtom } from '@application/recoils/navMenu';
-import { memo, useCallback, useEffect, useMemo } from 'react';
+import {
+  activeNavMenuAtom,
+  navMenuAtom,
+} from '@application/recoils/navMenu/atoms';
+import { searchKeywordAtom } from '@application/recoils/search/atoms';
+import { memo, useCallback, useEffect, useMemo, useState } from 'react';
 import isEqual from 'react-fast-compare';
-import { useRecoilState, useRecoilValue } from 'recoil';
+import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 import styles from './style.module.scss';
 
 function Navbar(): JSX.Element {
   const isMobile = useCheckDevice();
   const menu = useRecoilValue(navMenuAtom);
   const [activeMenu, setActiveMenu] = useRecoilState(activeNavMenuAtom);
+  const setSearchKeyword = useSetRecoilState(searchKeywordAtom);
+  const [searchValue, setSearchValue] = useState<string>('');
 
   useEffect(() => {
     if (isMobile) {
@@ -30,7 +36,9 @@ function Navbar(): JSX.Element {
     setActiveMenu(selectedMenu);
   }, []);
 
-  const onSearchClick = useCallback((): void => {}, []);
+  const onSearchClick = useCallback((): void => {
+    setSearchKeyword(searchValue);
+  }, [searchValue]);
 
   return (
     <nav className="navbar bg-gray-2">
@@ -54,13 +62,20 @@ function Navbar(): JSX.Element {
           })}
         </ul>
         {!isMobile && (
-          <a
-            role="presentation"
-            className={`d-flex w-15 justify-content-end ${styles.searchContainer}`}
-            onClick={onSearchClick}
-            onKeyDown={onSearchClick}>
-            <img className={styles.search} src="/ic_search.svg" />
-          </a>
+          <div
+            className={`w-15 d-flex justify-content-end ${styles.searchWrppaer}`}>
+            <input
+              value={searchValue}
+              onChange={(e) => setSearchValue(e.target.value)}
+            />
+            <a
+              role="presentation"
+              className={styles.searchContainer}
+              onClick={onSearchClick}
+              onKeyDown={onSearchClick}>
+              <img className={styles.search} src="/ic_search.svg" />
+            </a>
+          </div>
         )}
       </div>
     </nav>

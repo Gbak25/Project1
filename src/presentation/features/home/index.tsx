@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import { useCheckDevice } from '@application/hooks/use_check_device';
-import { activeNavMenuAtom } from '@application/recoils/navMenu';
+import { activeNavMenuAtom } from '@application/recoils/navMenu/atoms';
 import { mostViewdData, newData } from '@infrastructure/data/data';
 import type { VideoItemModel } from '@infrastructure/data/models';
 import dayjs from 'dayjs';

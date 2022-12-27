@@ -109,7 +109,7 @@ function VIdeoDetail(props: VIdeoDetailProps): JSX.Element {
         </div>
         <div className={style.list}>
           {' '}
-          <p className={style.nana}> Recommended Video</p>
+          <p className={style.nana}>Recommended Video</p>
           <ul className={style.column}>
             {newData.map((d) => {
               return (
