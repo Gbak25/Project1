@@ -1,3 +1,5 @@
+import type { CategoryTypes } from './enums';
+
 export type HospitalModel = {
   id: string;
   name: string;
@@ -23,6 +25,7 @@ export type CommentItemModel = {
 export type VideoItemModel = {
   id: string;
   title: string;
+  category: CategoryTypes;
   uploaderName: string;
   videoUrl: string;
   thumbnailPath: string;

@@ -1,3 +1,4 @@
+import { CategoryTypes } from './enums';
 import type { CommentItemModel, VideoItemModel } from './models';
 
 export const commentData: CommentItemModel[] = [
@@ -61,6 +62,7 @@ export const allData: VideoItemModel[] = [
   {
     id: '1',
     title: 'Craniectomy surgical procedure - 3D animation',
+    category: CategoryTypes.Anesthesiology,
     uploaderName: 'Amerra Medical',
     videoUrl: 'https://www.youtube.com/watch?v=1RkseDeYS9g',
     thumbnailPath:
@@ -86,12 +88,13 @@ export const allData: VideoItemModel[] = [
   {
     id: '2',
     title: 'Rhinoplasty (Nose Job) Video Animation - Guncel Ozturk, MD',
+    category: CategoryTypes.Anesthesiology,
     uploaderName: 'Güncel Öztürk',
     videoUrl: 'https://www.youtube.com/watch?v=dyNpojnbNT4',
     thumbnailPath:
       'https://i.ytimg.com/vi/dyNpojnbNT4/hq2.jpg?sqp=-oaymwE2COADEI4CSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIF8oWDAP&rs=AOn4CLDbiV3gFI2rx1NsKJuj_YhSMcy7aA',
     profile: {
-      id: '1',
+      id: '2',
       name: 'Güncel Öztürk ',
       categories: ['Cosmetic Suregery'],
       profileUrl:
@@ -111,12 +114,13 @@ export const allData: VideoItemModel[] = [
   {
     id: '3',
     title: 'Leg Amputation Surgery 3D animation',
+    category: CategoryTypes.Anesthesiology,
     uploaderName: 'Legal Graphicworks, LGW Mediaworks',
     videoUrl: 'https://www.youtube.com/watch?v=qJ2LVSCGhbU&t=11s',
     thumbnailPath:
       'https://i.ytimg.com/vi/qJ2LVSCGhbU/hq2.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCK5khFobMhjPE04Y4uDzxdiDkjKw',
     profile: {
-      id: '1',
+      id: '3',
       name: 'Legal Graphicworks, LGW Mediaworks',
       categories: ['Orthopaedic'],
       profileUrl:
@@ -136,12 +140,13 @@ export const allData: VideoItemModel[] = [
   {
     id: '4',
     title: 'Cameron Underwood Face Transplant Surgical Animation 2018',
+    category: CategoryTypes.Anesthesiology,
     uploaderName: 'NYU Langone Health',
     videoUrl: 'https://www.youtube.com/watch?v=cKnw7HWzbGU',
     thumbnailPath:
       'https://i.ytimg.com/vi/cKnw7HWzbGU/hq2.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLApdLHPAsysqvQO9uY4HXOWscSfxQ',
     profile: {
-      id: '1',
+      id: '4',
       name: 'NYU Langone Health',
       categories: ['Cosmetic Surgery'],
       profileUrl:
@@ -161,12 +166,13 @@ export const allData: VideoItemModel[] = [
   {
     id: '5',
     title: 'Joe DiMeo Face and Double Hand Transplant Surgical Animation 2021',
+    category: CategoryTypes.Anesthesiology,
     uploaderName: 'NYU Langone Healt',
     videoUrl: 'youtube.com/watch?v=NV7p4Mdh7xk',
     thumbnailPath:
       'https://i.ytimg.com/vi/NV7p4Mdh7xk/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDUBoVIQUVdQ-UHyobSeltoDWXR-',
     profile: {
-      id: '1',
+      id: '5',
       name: 'NYU Langone Health',
       categories: ['Transplant Surgeon'],
       profileUrl:
@@ -186,12 +192,13 @@ export const allData: VideoItemModel[] = [
   {
     id: '6',
     title: 'Angioplasty Procedure Animation Video.',
+    category: CategoryTypes.Anesthesiology,
     uploaderName: 'Fortis Healthcare    ',
     videoUrl: 'https://www.youtube.com/watch?v=e13TGGccvT4',
     thumbnailPath:
       'https://i.ytimg.com/vi/e13TGGccvT4/hq2.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBGGyK3qLL6RYI3wEhF0CXf8KRbVw',
     profile: {
-      id: '1',
+      id: '6',
       name: 'Fortis Healthcare',
       categories: ['Angioplasty'],
       profileUrl:
