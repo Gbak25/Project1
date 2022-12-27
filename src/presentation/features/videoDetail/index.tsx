@@ -67,12 +67,8 @@ function VIdeoDetail(props: VIdeoDetailProps): JSX.Element {
             </div>
           </div>
           <div className={style.dont}>
-            <p className={style.simple}> Title </p>
-            <p className={style.divider2}>
-              {' '}
-              This video is a discussion made over the clinical usage of
-              A-deltafiber{' '}
-            </p>
+            <p className={style.simple}>{video.title}</p>
+            <p className={style.divider2}> {video.description} </p>
             <div className={style.download}>
               <div role="presentation" onClick={onLikeClick}>
                 Like
