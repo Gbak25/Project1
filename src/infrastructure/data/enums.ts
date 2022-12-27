@@ -10,4 +10,8 @@ export enum CategoryTypes {
   Dentist = 'Dentist',
   Psychiatrist = 'Psychiatrist',
   Psychosurgeon = 'Psychosurgeon',
+  Craniectomy = 'Craniectomy',
+  CosmeticSurgeon = 'Cosmetic Surgeon',
+  OsteoSurgeon = 'OsteoSurgeon',
+  TransplantSurgeon = 'Transplant Surgeon',
 }

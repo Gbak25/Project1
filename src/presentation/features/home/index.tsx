@@ -13,11 +13,13 @@ import styles from './style.module.scss';
 const hero = [
   {
     id: 1,
-    imagePath: '/O.jpg',
+    imagePath:
+      'https://montclairradiology.com/wp-content/uploads/2021/06/montclair-radiology-_6CA0079-2.jpg',
   },
   {
     id: 2,
-    imagePath: '/R2.png',
+    imagePath:
+      'https://mblogthumb-phinf.pstatic.net/20140915_243/kahp_blog_1410767126989PDd0y_JPEG/359703_71109_488.jpg?type=w2',
   },
   {
     id: 3,

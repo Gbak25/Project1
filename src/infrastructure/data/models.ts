@@ -25,6 +25,7 @@ export type CommentItemModel = {
 export type VideoItemModel = {
   id: string;
   title: string;
+  description: string;
   category: CategoryTypes;
   uploaderName: string;
   videoUrl: string;
