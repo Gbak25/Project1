@@ -22,6 +22,16 @@
   font-weight: 700;
 }
 
+.searchWrppaer {
+  position: relative;
+
+  > input {
+    position: absolute;
+    right: 72px;
+    bottom: 0;
+  }
+}
+
 .searchContainer {
   cursor: pointer;
 }
