@@ -1,14 +1,10 @@
 /* stylelint-disable selector-class-pattern */
 .categoryList {
+  width: 60%;
   overflow-x: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 
   li {
+    cursor: pointer;
     padding: 0 16px;
   }
 }

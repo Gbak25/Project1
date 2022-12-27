@@ -68,6 +68,7 @@ function Home(): JSX.Element {
           {hero.map((h) => {
             return (
               <img
+                alt="dot"
                 key={h.id}
                 src={h.id === activeId ? '/Yesfilledot.svg' : 'Nofilledot.svg'}
               />
@@ -94,7 +95,7 @@ function Home(): JSX.Element {
               return (
                 <Link key={d.id} href={`/detail/${d.id}`}>
                   <li className={styles.newitemcontainer}>
-                    <img src={d.thumbnailPath} />
+                    <img alt="thumbnail" src={d.thumbnailPath} />
                     <p>{d.title}</p>
                   </li>
                 </Link>
@@ -109,7 +110,7 @@ function Home(): JSX.Element {
               return (
                 <Link key={d.id} href={`/detail/${d.id}`}>
                   <li className={styles.newitemcontainer2}>
-                    <img src={d.thumbnailPath} />
+                    <img alt="thumbnail" src={d.thumbnailPath} />
                     <div className={styles.mrspace}>
                       <div>
                         <p className={styles.title2}>{d.title}</p>
