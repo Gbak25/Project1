@@ -109,12 +109,13 @@
     img{
         margin-right: 8px;
         width: 250px;
+        min-width: 250px;
         height:150px;
         object-fit: cover;
     }
 
     .title2{
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 250;
     }
 
@@ -124,7 +125,7 @@
     }
 
     .name{
-        font-size: 20px;
+        font-size: 13px;
         font-weight: 170;
     }
 
