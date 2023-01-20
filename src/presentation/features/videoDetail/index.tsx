@@ -24,15 +24,19 @@ function VIdeoDetail(props: VIdeoDetailProps): JSX.Element {
   };
 
   const onSaveClick = (): void => {
-    alert(`You've saved ${video?.profile.name}'s video`);
+    alert(
+      `Save is not supported yet. You can't save ${video?.profile.name}'s video`,
+    );
   };
 
   const onDownloadClick = (): void => {
-    alert(`You've downloaded ${video?.profile.name}'s video`);
+    alert(
+      `Download is not supported yet. You can't download ${video?.profile.name}'s video.`,
+    );
   };
 
   const onOthersClick = (): void => {
-    alert(`Others`);
+    alert(`Video Share is not supprted yet`);
   };
 
   if (!video) {
@@ -41,19 +45,14 @@ function VIdeoDetail(props: VIdeoDetailProps): JSX.Element {
   return (
     <div className={style.everything}>
       <div className={style.videodetail}>
-        <ReactPlayer
-          url={video.videoUrl}
-          controls={false}
-          width="100%"
-          height="100%"
-        />
+        <ReactPlayer url={video.videoUrl} controls width="100%" height="100%" />
       </div>
       <div className={style.divider}>
         <div className={style.commentary}>
           <div className={style.profilecontainer}>
             <Link href={`/profile/${video.profile.id}`}>
               <img className={style.profiles} src={video.profile.profileUrl} />{' '}
-              {video.profile.name}{' '}
+              <span>{video.profile.name}</span>
             </Link>
             <div className={style.displayer}>
               <img
@@ -62,8 +61,18 @@ function VIdeoDetail(props: VIdeoDetailProps): JSX.Element {
                 src={heartClicked ? '/H.svg' : '/heart.svg'}
                 onClick={(): void => setHeartClicked((prev) => !prev)}
               />
-              <img src="/save.svg" />
-              <img src="/more.svg" />
+              <img
+                alt="icon"
+                role="presentation"
+                src="/save.svg"
+                onClick={onDownloadClick}
+              />
+              <img
+                alt="icon"
+                role="presentation"
+                src="/more.svg"
+                onClick={onOthersClick}
+              />
             </div>
           </div>
           <div className={style.dont}>
@@ -93,9 +102,9 @@ function VIdeoDetail(props: VIdeoDetailProps): JSX.Element {
                         <Link href={`/profile/${d.profile.id}`}>
                           <img src={d.profile.profileUrl} />
                         </Link>
-                        {d.profile.name}
+                        <span>{d.profile.name}</span>
                       </div>
-                      {d.text}
+                      <p className={style.forDesc}>{d.text}</p>
                     </li>
                   );
                 })}

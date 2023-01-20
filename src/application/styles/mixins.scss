@@ -10,13 +10,23 @@ $gray-3: #d9dee9;
 $gray-4: #c8c4db;
 $gray-5: #a1a1c2;
 $gray-6: #5f6294;
+$natural-10: #f2f4f8;
+$natural-20: #dde1e6;
+$natural-30: #c1c7cd;
+$natural-40: #a2a9b0;
+$natural-50: #878d96;
+$natural-60: #697077;
+$natural-70: #4d5358;
+$natural-80: #343a3f;
+$natural-90: #21272a;
+$natural-100: #121619;
 $yellow: #ff0;
 $orange: #faad15;
 $red: #f5222e;
 $pink: #fd3995;
 $purple: #652eff;
 $green: #41b883;
-$text: $gray-6;
+$text: $natural-70;
 $border: $gray-2;
 
 // Accent colors
@@ -33,7 +43,7 @@ $dark: $black;
 // Shadows
 $shadow: 0 0 40px -10px rgba($black, 0.2);
 $shadow-2: 0 4px 38px 0 rgba($black, 0.11), 0 0 21px 0 rgba($black, 0.05);
-$shadow-3: 0 0 100px -30px rgb(57 55 73 / 30%);
+$shadow-3: 0 0 100px -10px rgb(57 55 73 / 30%);
 $shadow-4: 0 4px 10px 0 rgba($black, 0.03), 0 0 10px 0 rgba($black, 0.02);
 $shadow-5: 0 0 40px -10px rgba($black, 0.4);
 $shadow-ant: 0 10px 35px -5px rgb(0 0 0 / 15%);

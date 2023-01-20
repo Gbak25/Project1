@@ -10,4 +10,9 @@ module.exports = withInterceptStdout({
     };
     return config;
   },
+  experimental: {
+    fontLoaders: [
+      { loader: '@next/font/google', options: { subsets: ['latin'] } },
+    ],
+  },
 }, (text) => (text.includes('Duplicate atom key') ? '' : text));

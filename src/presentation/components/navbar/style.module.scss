@@ -1,17 +1,27 @@
 /* stylelint-disable selector-class-pattern */
+@import '@styles/mixins';
+
+.barContainer {
+  position: relative;
+  box-shadow: $shadow-3;
+  background-color: $white;
+}
+
 .categoryList {
+  display: flex;
+  flex-wrap: nowrap;
   width: 60%;
   overflow-x: scroll;
 
   li {
     cursor: pointer;
     padding: 0 16px;
+    white-space: nowrap;
   }
-}
 
-.search {
-  width: 32px;
-  height: 32px;
+  @media (max-width: 576px){
+    width: 100%;
+  }
 }
 
 .activeMenu {
@@ -23,11 +33,25 @@
 
   > input {
     position: absolute;
-    right: 72px;
-    bottom: 0;
+    right: 36px;
+    bottom: 45%;
+    transform: translateY(50%);
+    border: 1px $natural-50 solid;
+    border-radius: 10px;
+    padding: 4px 12px;
+
+    &::placeholder {
+      color: $natural-40;
+      font-size: 14px;
+    }
   }
 }
 
 .searchContainer {
   cursor: pointer;
+
+  .search {
+    width: 28px;
+    height: 28px;
+  }
 }

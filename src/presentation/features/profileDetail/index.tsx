@@ -30,19 +30,21 @@ function ProfileDetail(props: ProfileDetailProps): JSX.Element {
         <div className={style.flex}>
           <div>
             <p className={style.font}>{profile.name}</p>
-            <button type="button" onClick={onButtonClick}>
+            <button
+              className={style.follow}
+              type="button"
+              onClick={onButtonClick}>
               Follow
             </button>
           </div>
-          <p> Profession: {`(${profile.categories.join(', ')})`}</p>
+          <p>Profession: {`(${profile.categories.join(', ')})`}</p>
+          <p>{`Follower: ${profile.followers}`}</p>
           <a
             href={`http://maps.google.com/maps?q=${profile.hospital.latitude},${profile.hospital.longitude}`}
             rel="noreferrer noopener"
             target="_blank">
             Go To Maps
           </a>
-          Follower:
-          {profile.followers}
         </div>
       </div>
       <div>

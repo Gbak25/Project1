@@ -3,17 +3,16 @@ import {
   activeNavMenuAtom,
   navMenuAtom,
 } from '@application/recoils/navMenu/atoms';
-import { searchKeywordAtom } from '@application/recoils/search/atoms';
+import Link from 'next/link';
 import { memo, useCallback, useEffect, useMemo, useState } from 'react';
 import isEqual from 'react-fast-compare';
-import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import styles from './style.module.scss';
 
 function Navbar(): JSX.Element {
   const isMobile = useCheckDevice();
   const menu = useRecoilValue(navMenuAtom);
   const [activeMenu, setActiveMenu] = useRecoilState(activeNavMenuAtom);
-  const setSearchKeyword = useSetRecoilState(searchKeywordAtom);
   const [searchValue, setSearchValue] = useState<string>('');
 
   useEffect(() => {
@@ -37,16 +36,18 @@ function Navbar(): JSX.Element {
   }, []);
 
   const onSearchClick = useCallback((): void => {
-    setSearchKeyword(searchValue);
+    alert(`You searched "${searchValue}". But, No result found`);
   }, [searchValue]);
 
   return (
-    <nav className="navbar bg-gray-2">
+    <nav className={`navbar ${styles.barContainer}`}>
       <div className="container d-flex flex-row justify-content-between py-3">
         {!isMobile && (
-          <p className="font-size-18 w-15 text-red fw-bold">Emergency</p>
+          <Link href="/">
+            <p className="font-size-18 w-15 text-red fw-bold">Emergency</p>
+          </Link>
         )}
-        <ul className={`d-flex flex-row ${styles.categoryList}`}>
+        <ul className={`${styles.categoryList}`}>
           {navMenu.map((m) => {
             return (
               <li
@@ -66,7 +67,8 @@ function Navbar(): JSX.Element {
             className={`w-15 d-flex justify-content-end ${styles.searchWrppaer}`}>
             <input
               value={searchValue}
-              onChange={(e) => setSearchValue(e.target.value)}
+              placeholder="Please input keyword"
+              onChange={(e): void => setSearchValue(e.target.value)}
             />
             <a
               role="presentation"

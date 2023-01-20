@@ -1,3 +1,1 @@
-<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.6248 8.33325C9.29671 8.33325 4.1665 13.4635 4.1665 19.7916C4.1665 31.2499 17.7082 41.6666 24.9998 44.0895C32.2915 41.6666 45.8332 31.2499 45.8332 19.7916C45.8332 13.4635 40.703 8.33325 34.3748 8.33325C30.4998 8.33325 27.0728 10.2572 24.9998 13.202C23.9433 11.697 22.5396 10.4688 20.9077 9.62126C19.2758 8.77376 17.4637 8.33195 15.6248 8.33325Z" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Heart</title><path d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>

@@ -1,3 +1,5 @@
+@import '@styles/mixins';
+
 .everything{
     @media (max-width: 576px){
         width:100%;
@@ -10,16 +12,18 @@
 .download{
     display: none;
 
-    div{
+    div {
         display: flex;
         align-items: center;
         justify-content: center;
         margin-right: 6px;
         border-radius: 12px;
-        background-color: #D9D9D9;
+        background-color: $natural-20;
+        cursor: pointer;
+        padding-bottom: 2px;
         width: 120px;
         height: 30px;
-        font-size: 12px;
+        font-size: 14px;
 }
 
 @media (max-width: 576px){
@@ -36,8 +40,8 @@
 }
 
 .nana{
-    font-size: 17px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 700;
 
     @media (max-width: 576px){
        display:none;
@@ -47,7 +51,7 @@
 .videodetail{
     position: relative;
     width:100%;
-    height:600px;
+    height:520px;
 
     @media (max-width: 576px){
         position: absolute;
@@ -64,13 +68,15 @@
 
     @media (max-width: 576px){
         flex-direction: column;
-        padding-top: 300px;
+        padding-top: 320px;
 }
 }
 
 .divider2{
-    display: flex;
+    display: block;
     padding-bottom: 20px;
+    color: $natural-50;
+    font-size: 15px;
 
     @media (max-width: 576px){
         display:none;
@@ -87,6 +93,10 @@
 .profilecontainer{
     display: flex;
     justify-content: space-between;
+
+  span {
+      font-size: 14px;
+    }
 }
 
 .list{
@@ -111,10 +121,11 @@
     display: flex;
 
     img {
-        margin:0 3px;
-        margin-top:5px;
-        width:35px;
-        height:35px;
+        margin:0 8px;
+        margin-top: 8px;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
     }
 
     @media (max-width: 576px){
@@ -136,53 +147,61 @@
     border-top: 2.5px #E3E3E3 solid;
     border-bottom: 2.5px #E3E3E3 solid;
     padding: 12px;
-    font-size: 16px;
 
-    img{
-        margin-right: 8px;
-        width: 200px;
-        height: 145px;
-        object-fit: cover;
-    }
+    > img{
+      margin-right: 12px;
+      width: 236px;
+      min-width: 236px;
+      height:150px;
+      object-fit: cover;
+  }
 
-    .title2{
-        font-size: 18px;
-        font-weight: 200;
-    }
+  .title2{
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 18px;
+      font-weight: 700;
+      -webkit-line-clamp: 2; /* number of lines to show */
+              line-clamp: 2;
+      -webkit-box-orient: vertical;
+  }
 
-    .date{
-        font-size: 15px;
-        font-weight: 140;
-    }
+  .date{
+    color: $gray-6;
+    font-size: 14px;
+  }
 
-    .name{
-        font-size: 13px;
-        font-weight: 170;
-    }
+  .name{
+      padding-top: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 15px;
+      -webkit-line-clamp: 1; /* number of lines to show */
+              line-clamp: 1;
+      -webkit-box-orient: vertical;
+  }
 
-    @media (max-width: 576px){
-        img{
-            width: 190px;
-            height: 150px;
-        }
+
+  @media (max-width: 576px){
+    > img{
+      width: 180px;
+      min-width: 180px;
+      height:120px;
+  }
 
         .title2{
-            font-size: 17px;
-            font-weight: 200;
+            font-size: 16px;
         }
 
         .date{
             font-size: 12px;
-            font-weight: 140;
         }
 
         .name{
-            font-size: 16px;
-            font-weight: 170;
+            font-size: 14px;
         }
-
     }
-
 }
 
 .column{
@@ -200,6 +219,11 @@
     flex-direction: column;
     justify-content: space-between;
     height: 150px;
+
+    @media (max-width: 576px){
+      width: 100%;
+      height: 120px;
+}
 }
 
 .forlist{
@@ -215,11 +239,20 @@
         object-fit: cover;
     }
 
+    span {
+      font-size: 14px;
+    }
+
+    .forDesc {
+      padding-bottom: 12px;
+      color: $natural-60;
+      font-size: 13px;
+    }
 }
 
 .simple{
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 17px;
+    font-weight: 700;
     @media (max-width: 576px){
         margin-bottom:10px;
 }

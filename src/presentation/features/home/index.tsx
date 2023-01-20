@@ -57,7 +57,7 @@ function Home(): JSX.Element {
         <img
           role="presentation"
           alt="arrowleft"
-          src="leftarrow.svg"
+          src="ic_arrow_left.svg"
           onClick={(): void =>
             setActiveId((prev) => {
               return prev < 2 ? prev : (prev -= 1);
@@ -78,7 +78,7 @@ function Home(): JSX.Element {
         <img
           role="presentation"
           alt="arrow"
-          src="arrow.svg"
+          src="ic_arrow_right.svg"
           onClick={(): void =>
             setActiveId((prev) => {
               return prev > 2 ? 1 : (prev += 1);
