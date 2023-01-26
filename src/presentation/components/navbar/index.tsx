@@ -44,7 +44,7 @@ function Navbar(): JSX.Element {
       <div className="container d-flex flex-row justify-content-between py-3">
         {!isMobile && (
           <Link href="/">
-            <p className="font-size-18 w-15 text-red fw-bold">Emergency</p>
+            <p className="font-size-18 w-15 text-red fw-bold">MediShare</p>
           </Link>
         )}
         <ul className={`${styles.categoryList}`}>

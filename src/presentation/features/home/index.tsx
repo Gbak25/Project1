@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { useCheckDevice } from '@application/hooks/use_check_device';
 import { activeNavMenuAtom } from '@application/recoils/navMenu/atoms';
-import { mostViewdData, newData } from '@infrastructure/data/data';
+import { allData, mostViewdData, newData } from '@infrastructure/data/data';
 import type { VideoItemModel } from '@infrastructure/data/models';
 import dayjs from 'dayjs';
 import Link from 'next/link';
@@ -36,6 +36,13 @@ function Home(): JSX.Element {
   const mostViewDynamicData = useMemo((): VideoItemModel[] => {
     if (isMobile && activeMenu === "What's new") {
       return newData;
+    }
+    if (
+      activeMenu !== undefined &&
+      activeMenu !== "What's new" &&
+      activeMenu !== 'Most viewed'
+    ) {
+      return allData.filter((a) => a.category === activeMenu);
     }
 
     return mostViewdData;
