@@ -1,36 +1,28 @@
 import type { CategoryTypes } from './enums';
 
-export type HospitalModel = {
+export type ChannelDTO = {
   id: string;
   name: string;
+  category: CategoryTypes[] | 'all';
+  address: string;
   latitude: number;
   longitude: number;
-};
-
-export type ProfileModel = {
-  id: string;
-  name: string;
-  categories: string[];
-  profileUrl: string;
-  followers: number;
-  hospital: HospitalModel;
 };
 
 export type CommentItemModel = {
   id: string;
   text: string;
-  profile: ProfileModel;
+  commenter: ChannelDTO;
 };
 
-export type VideoItemModel = {
+export type VideoDTO = {
   id: string;
   title: string;
   description: string;
-  category: CategoryTypes;
-  uploaderName: string;
+  category: CategoryTypes[];
   videoUrl: string;
-  thumbnailPath: string;
-  profile: ProfileModel;
+  thumbnailUrl: string;
+  uploader: ChannelDTO;
   createdAt: Date;
   isNew: boolean;
   isPopular: boolean;
