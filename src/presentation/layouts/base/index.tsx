@@ -1,8 +1,6 @@
 import { Noto_Sans_KR } from '@next/font/google';
-import Navbar from '@presentation/components/navbar';
-import { memo } from 'react';
-import isEqual from 'react-fast-compare';
-import styles from './styles.module.scss';
+import { Container } from '@radix-ui/themes';
+import { NavBar } from '../../components/navbar';
 
 type BaseLayoutProps = {
   children: JSX.Element | JSX.Element[];
@@ -13,15 +11,13 @@ const notoSansKR = Noto_Sans_KR({
   subsets: ['latin'],
 });
 
-function BaseLayout(props: BaseLayoutProps): JSX.Element {
+export function BaseLayout(props: BaseLayoutProps): JSX.Element {
   const { children } = props;
 
   return (
-    <main className={`${notoSansKR.className} ${styles.wrapper}`}>
-      <Navbar />
-      <div className="container">{children}</div>
+    <main className={`${notoSansKR.className}`}>
+      <NavBar />
+      <Container>{children}</Container>
     </main>
   );
 }
-
-export default memo(BaseLayout, isEqual);

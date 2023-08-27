@@ -1,4 +1,4 @@
-import VideoDetail from '@presentation/features/videoDetail';
+import { VideoDetail } from '@presentation/features/videoDetail';
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 

@@ -1,12 +1,8 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '@application/styles/vendors/bootstrap/style.scss';
-import '@application/styles/globals.scss';
-import '@application/styles/measurements.scss';
-import '@application/styles/colors.scss';
-import '@application/styles/router.scss';
-import '@application/styles/utils.scss';
+import '@radix-ui/themes/styles.css';
+import '@application/global.scss';
 import config from '@application/configs/seo.json';
-import BaseLayout from '@presentation/layouts/base';
+import { BaseLayout } from '@presentation/layouts/base';
+import { Theme } from '@radix-ui/themes';
 import type { AppProps } from 'next/app';
 import NextHead from 'next/head';
 import { DefaultSeo } from 'next-seo';
@@ -22,9 +18,11 @@ function MyApp(props: AppProps): JSX.Element {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </NextHead>
       <RecoilRoot>
-        <BaseLayout>
-          <Component {...pageProps} />
-        </BaseLayout>
+        <Theme>
+          <BaseLayout>
+            <Component {...pageProps} />
+          </BaseLayout>
+        </Theme>
       </RecoilRoot>
     </>
   );
