@@ -1,5 +1,5 @@
 import { CategoryTypes } from './enums';
-import type { ChannelDTO, VideoDTO } from './models';
+import type { ChannelDTO, CommentDTO, VideoDTO } from './models';
 
 export const channelData: ChannelDTO[] = [
   {
@@ -296,5 +296,14 @@ export const videoData: VideoDTO[] = [
     createdAt: new Date(),
     isNew: false,
     isPopular: false,
+  },
+];
+
+export const commentData: CommentDTO[] = [
+  {
+    id: '1',
+    videoId: '1',
+    content: 'Bla Bla',
+    uploader: channelData.find((c) => c.id === '4')!,
   },
 ];

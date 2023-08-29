@@ -27,3 +27,10 @@ export type VideoDTO = {
   isNew: boolean;
   isPopular: boolean;
 };
+
+export type CommentDTO = {
+  id: string;
+  videoId: string;
+  content: string;
+  uploader: ChannelDTO;
+};
