@@ -30,4 +30,10 @@ export const globalStyles = css`
     top: 0;
     left: 0;
   }
+
+  .mb {
+    &-12 {
+      margin-bottom: 12px;
+    }
+  }
 `;

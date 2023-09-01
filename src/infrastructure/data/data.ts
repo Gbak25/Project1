@@ -13,6 +13,7 @@ export const channelData: ChannelDTO[] = [
     address: '부산광역시 부산진구 중앙대로 716-1',
     latitude: 35.1566928,
     longitude: 129.0593822,
+    followers: 1232,
   },
   {
     id: '2',
@@ -21,6 +22,7 @@ export const channelData: ChannelDTO[] = [
     address: '서울특별시 서대문구 신촌동 연세로 50-1',
     latitude: 37.5623371,
     longitude: 126.9408692,
+    followers: 132,
   },
   {
     id: '3',
@@ -29,6 +31,7 @@ export const channelData: ChannelDTO[] = [
     address: '서울특별시 동작구 흑석로 102',
     latitude: 37.5066909,
     longitude: 126.9607295,
+    followers: 32,
   },
   {
     id: '4',
@@ -37,6 +40,7 @@ export const channelData: ChannelDTO[] = [
     address: '서울특별시 마포구 신촌로 162',
     latitude: 37.5562797,
     longitude: 126.9437026,
+    followers: 72,
   },
   {
     id: '5',
@@ -45,6 +49,7 @@ export const channelData: ChannelDTO[] = [
     address: '서울특별시 서초구 반포대로 222',
     latitude: 37.5016116,
     longitude: 127.0047678,
+    followers: 42,
   },
   {
     id: '6',
@@ -53,6 +58,7 @@ export const channelData: ChannelDTO[] = [
     address: '부산광역시 서구 구덕로 179',
     latitude: 35.1004806,
     longitude: 129.0190543,
+    followers: 662,
   },
   {
     id: '7',
@@ -61,6 +67,7 @@ export const channelData: ChannelDTO[] = [
     address: '서울특별시 종로구 대학로 101',
     latitude: 37.5795427,
     longitude: 126.9990602,
+    followers: 232,
   },
   {
     id: '8',
@@ -69,6 +76,7 @@ export const channelData: ChannelDTO[] = [
     address: '서울특별시 강서구 공항대로 389',
     latitude: 37.556895,
     longitude: 126.850927,
+    followers: 112,
   },
   {
     id: '9',
@@ -77,6 +85,7 @@ export const channelData: ChannelDTO[] = [
     address: '서울특별시 강서구 공항대로 389',
     latitude: 37.5284349,
     longitude: 126.8636189,
+    followers: 156,
   },
   {
     id: '10',
@@ -85,6 +94,7 @@ export const channelData: ChannelDTO[] = [
     address: '서울특별시 성북구 고려대로 73',
     latitude: 37.5870416,
     longitude: 127.0265402,
+    followers: 455,
   },
 ];
 

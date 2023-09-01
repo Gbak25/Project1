@@ -3,6 +3,7 @@ import {
   useGetVideoById,
 } from '@application/hooks/use_get_data';
 import { Box, Flex, ScrollArea } from '@radix-ui/themes';
+import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import ReactPlayer from 'react-player';
 import { CommentInput } from '../../components/organisms/commentInput';
@@ -39,6 +40,12 @@ export function VideoDetail(props: VideoDetailProps): JSX.Element {
               url={data.videoUrl}
             />
           </Box>
+          <h3 className="typo-title-l">{data.title}</h3>
+          <Link href={`/channel/${data.uploader.id}`}>
+            <h6 className="typo-title-m">{data.uploader.name}</h6>
+          </Link>
+          <div style={{ height: 1, width: '100%', backgroundColor: '#000' }} />
+          <p className="typo-body-l mb-12">{data.description}</p>
           <CommentInput videoId={data.id} />
           <CommentList>
             {commentData.map((d) => {

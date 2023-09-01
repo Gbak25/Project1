@@ -7,6 +7,7 @@ export type ChannelDTO = {
   address: string;
   latitude: number;
   longitude: number;
+  followers: number;
 };
 
 export type CommentItemModel = {
