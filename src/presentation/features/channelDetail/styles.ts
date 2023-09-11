@@ -15,6 +15,7 @@ export const RightSectionWrapper = styled.div({
   position: 'relative',
   display: 'flex',
   flexDirection: 'column',
+  gap: '24px',
   width: '30%',
 
   '@media (max-width: 600px)': {

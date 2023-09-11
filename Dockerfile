@@ -1,6 +1,6 @@
 FROM node:lts as dependencies
 WORKDIR /usr/src/app
-COPY package.json yarn.lock ./
+COPY package.json ./
 RUN yarn install
 
 FROM node:lts as builder
@@ -13,7 +13,6 @@ FROM node:lts as runner
 WORKDIR /usr/src/app
 ENV NODE_ENV production
 
-COPY --from=builder /usr/src/app/next-i18next.config.js ./
 COPY --from=builder /usr/src/app/next.config.js ./
 COPY --from=builder /usr/src/app/public ./public
 COPY --from=builder /usr/src/app/.next ./.next

@@ -10,14 +10,10 @@ export function useLike(): {
     toggleLike: (videoId: string) =>
       setLikedVideoIds((prev) => {
         const liked = prev.find((l) => l === videoId);
+        console.log([...prev.filter((l) => l !== videoId)]);
         return !liked
-          ? {
-              ...prev,
-              videoId,
-            }
-          : {
-              ...prev.filter((l) => l !== videoId),
-            };
+          ? [...prev, videoId]
+          : [...prev.filter((l) => l !== videoId)];
       }),
   };
 }

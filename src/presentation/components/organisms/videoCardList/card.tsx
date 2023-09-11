@@ -1,3 +1,4 @@
+import { Box, Flex } from '@radix-ui/themes';
 import dayjs from 'dayjs';
 import { useRouter } from 'next/router';
 import { useCallback } from 'react';
@@ -24,9 +25,16 @@ export function VideoCard(props: VideoCardProps): JSX.Element {
         <VideoCardImage src={imageUrl} />
         <Chip label="BEST" absolute={{ right: 20, bottom: -16 }} />
       </VideoCardImageWrapper>
-      <Chip label={category} color={palette.primary._6} />
-      <p>{title}</p>
-      <p>{dayjs(uploadedAt).format('YYYY.MM.DD')}</p>
+      <Box px="5" py="4">
+        <Chip label={category} color={palette.primary._6} />
+        <p className="mt-16 mb-16 shorten-sentence">{title}</p>
+        <Flex gap="1">
+          <img alt="calendar" src="/Calendar.svg" />
+          <p className="typo-body-s" style={{ color: palette.neutral._5 }}>
+            {dayjs(uploadedAt).format('YYYY.MM.DD')}
+          </p>
+        </Flex>
+      </Box>
     </VideoCardWrapper>
   );
 }

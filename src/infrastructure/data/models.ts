@@ -25,6 +25,7 @@ export type VideoDTO = {
   thumbnailUrl: string;
   uploader: ChannelDTO;
   createdAt: Date;
+  likes: number;
   isNew: boolean;
   isPopular: boolean;
 };
@@ -34,4 +35,12 @@ export type CommentDTO = {
   videoId: string;
   content: string;
   uploader: ChannelDTO;
+};
+
+export type QnADTO = {
+  id: string;
+  channelId: string;
+  content: string;
+  uploader: ChannelDTO;
+  replies: QnADTO[];
 };

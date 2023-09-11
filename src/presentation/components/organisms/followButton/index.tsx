@@ -15,6 +15,23 @@ export function FollowButton(props: FollowButtonProps): JSX.Element {
     return followedChannelIds.find((d) => d === channelId) !== undefined;
   }, [followedChannelIds]);
 
+  const styles = useMemo(() => {
+    if (!isFollowed) {
+      return {
+        border: '1px solid #4D5358',
+        color: '#4D5358',
+        borderRadius: '99px',
+        padding: '24px 8px',
+      };
+    }
+    return {
+      border: 'none',
+      color: 'white',
+      borderRadius: '99px',
+      padding: '24px 8px',
+    };
+  }, [isFollowed]);
+
   const onSubscribeClick = useCallback((): void => {
     toggleFollow(channelId);
   }, []);
@@ -22,8 +39,9 @@ export function FollowButton(props: FollowButtonProps): JSX.Element {
   return (
     <MButton
       label={isFollowed ? 'Subscribed' : 'Subscribe'}
-      backgroundColor={isFollowed ? palette.primary._6 : undefined}
+      backgroundColor={isFollowed ? palette.primary._6 : 'transparent'}
       onClick={onSubscribeClick}
+      styles={styles}
     />
   );
 }

@@ -4,7 +4,8 @@ import { useMemo } from 'react';
 import type { MButtonTypes } from './types';
 
 export function MButton(props: MButtonTypes): JSX.Element {
-  const { backgroundColor, label, leftIcon, rightIcon, onClick } = props;
+  const { backgroundColor, label, leftIcon, rightIcon, onClick, styles } =
+    props;
 
   const bgColor = useMemo((): string => {
     return backgroundColor || palette.neutral._9;
@@ -12,7 +13,7 @@ export function MButton(props: MButtonTypes): JSX.Element {
 
   return (
     <Button
-      style={{ cursor: 'pointer', backgroundColor: bgColor }}
+      style={{ cursor: 'pointer', backgroundColor: bgColor, ...styles }}
       onClick={onClick}>
       {leftIcon}
       {label}

@@ -1,6 +1,6 @@
 import localFont from '@next/font/local';
-import { Container } from '@radix-ui/themes';
 import { NavBar } from '../../components/molecules/navbar';
+import { DrawerCategories } from '../../components/organisms/drawerCategories';
 
 type BaseLayoutProps = {
   children: JSX.Element | JSX.Element[];
@@ -37,7 +37,8 @@ export function BaseLayout(props: BaseLayoutProps): JSX.Element {
   return (
     <main className={`${myFont.className}`}>
       <NavBar />
-      <Container>{children}</Container>
+      {children}
+      <DrawerCategories />
     </main>
   );
 }

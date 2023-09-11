@@ -4,4 +4,5 @@ export type MButtonTypes = {
   leftIcon?: JSX.Element;
   rightIcon?: JSX.Element;
   onClick: () => void;
+  styles?: React.CSSProperties;
 };

@@ -1,6 +1,6 @@
 import { atom } from 'recoil';
 
-export const activeNavMenuAtom = atom<string | undefined>({
-  key: 'activeNavMenuAtom',
+export const searchKeywordAtom = atom<string | undefined>({
+  key: 'searchKeywordAtom',
   default: undefined,
 });

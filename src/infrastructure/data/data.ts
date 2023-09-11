@@ -1,5 +1,5 @@
 import { CategoryTypes } from './enums';
-import type { ChannelDTO, CommentDTO, VideoDTO } from './models';
+import type { ChannelDTO, CommentDTO, QnADTO, VideoDTO } from './models';
 
 export const channelData: ChannelDTO[] = [
   {
@@ -109,6 +109,7 @@ export const videoData: VideoDTO[] = [
     thumbnailUrl: 'http://i3.ytimg.com/vi/_l5F_hiqHas/hqdefault.jpg',
     uploader: channelData.find((c) => c.id === '1')!,
     createdAt: new Date(),
+    likes: 11,
     isNew: true,
     isPopular: true,
   },
@@ -122,6 +123,7 @@ export const videoData: VideoDTO[] = [
     thumbnailUrl: 'http://i3.ytimg.com/vi/u7tMcf25_KY/hqdefault.jpg',
     uploader: channelData.find((c) => c.id === '1')!,
     createdAt: new Date(),
+    likes: 12,
     isNew: true,
     isPopular: true,
   },
@@ -135,6 +137,7 @@ export const videoData: VideoDTO[] = [
     thumbnailUrl: 'http://i3.ytimg.com/vi/XugBkFkUoYc/hqdefault.jpg',
     uploader: channelData.find((c) => c.id === '1')!,
     createdAt: new Date(),
+    likes: 14,
     isNew: true,
     isPopular: true,
   },
@@ -148,6 +151,7 @@ export const videoData: VideoDTO[] = [
     thumbnailUrl: 'http://i3.ytimg.com/vi/t8BMXvMB-wg/hqdefault.jpg',
     uploader: channelData.find((c) => c.id === '9')!,
     createdAt: new Date(),
+    likes: 31,
     isNew: true,
     isPopular: false,
   },
@@ -160,6 +164,7 @@ export const videoData: VideoDTO[] = [
     thumbnailUrl: 'http://i3.ytimg.com/vi/aHFLogDQ0uA/hqdefault.jpg',
     uploader: channelData.find((c) => c.id === '9')!,
     createdAt: new Date(),
+    likes: 51,
     isNew: false,
     isPopular: true,
   },
@@ -173,6 +178,7 @@ export const videoData: VideoDTO[] = [
     thumbnailUrl: 'http://i3.ytimg.com/vi/ZCgdL2zjOmw/hqdefault.jpg',
     uploader: channelData.find((c) => c.id === '9')!,
     createdAt: new Date(),
+    likes: 8,
     isNew: false,
     isPopular: true,
   },
@@ -185,6 +191,7 @@ export const videoData: VideoDTO[] = [
     thumbnailUrl: 'http://i3.ytimg.com/vi/mi7-JlDFvM0/hqdefault.jpg',
     uploader: channelData.find((c) => c.id === '10')!,
     createdAt: new Date(),
+    likes: 21,
     isNew: false,
     isPopular: true,
   },
@@ -198,6 +205,7 @@ export const videoData: VideoDTO[] = [
     thumbnailUrl: 'http://i3.ytimg.com/vi/oq71010xImk/hqdefault.jpg',
     uploader: channelData.find((c) => c.id === '10')!,
     createdAt: new Date(),
+    likes: 17,
     isNew: false,
     isPopular: true,
   },
@@ -211,6 +219,7 @@ export const videoData: VideoDTO[] = [
     thumbnailUrl: 'http://i3.ytimg.com/vi/IxqQNJrTQY0/hqdefault.jpg',
     uploader: channelData.find((c) => c.id === '10')!,
     createdAt: new Date(),
+    likes: 37,
     isNew: false,
     isPopular: true,
   },
@@ -225,6 +234,7 @@ export const videoData: VideoDTO[] = [
     thumbnailUrl: 'http://i3.ytimg.com/vi/1M1jaaUjkKk/hqdefault.jpg',
     uploader: channelData.find((c) => c.id === '7')!,
     createdAt: new Date(),
+    likes: 4,
     isNew: false,
     isPopular: false,
   },
@@ -238,6 +248,7 @@ export const videoData: VideoDTO[] = [
     thumbnailUrl: 'http://i3.ytimg.com/vi/I3zKWaVpF4Y/hqdefault.jpg',
     uploader: channelData.find((c) => c.id === '7')!,
     createdAt: new Date(),
+    likes: 22,
     isNew: false,
     isPopular: false,
   },
@@ -252,6 +263,7 @@ export const videoData: VideoDTO[] = [
     thumbnailUrl: 'http://i3.ytimg.com/vi/Frrwu-i0zTM/hqdefault.jpg',
     uploader: channelData.find((c) => c.id === '7')!,
     createdAt: new Date(),
+    likes: 55,
     isNew: false,
     isPopular: false,
   },
@@ -265,6 +277,7 @@ export const videoData: VideoDTO[] = [
     thumbnailUrl: 'http://i3.ytimg.com/vi/C9lnlMjYdeE/hqdefault.jpg',
     uploader: channelData.find((c) => c.id === '6')!,
     createdAt: new Date(),
+    likes: 21,
     isNew: false,
     isPopular: false,
   },
@@ -278,6 +291,7 @@ export const videoData: VideoDTO[] = [
     thumbnailUrl: 'http://i3.ytimg.com/vi/Xkg34dHLP2Q/hqdefault.jpg',
     uploader: channelData.find((c) => c.id === '4')!,
     createdAt: new Date(),
+    likes: 31,
     isNew: false,
     isPopular: false,
   },
@@ -291,6 +305,7 @@ export const videoData: VideoDTO[] = [
     thumbnailUrl: 'http://i3.ytimg.com/vi/-KB-c08P9k0/hqdefault.jpg',
     uploader: channelData.find((c) => c.id === '4')!,
     createdAt: new Date(),
+    likes: 121,
     isNew: false,
     isPopular: false,
   },
@@ -304,6 +319,7 @@ export const videoData: VideoDTO[] = [
     thumbnailUrl: 'http://i3.ytimg.com/vi/F-MyBsW6UTI/hqdefault.jpg',
     uploader: channelData.find((c) => c.id === '4')!,
     createdAt: new Date(),
+    likes: 11,
     isNew: false,
     isPopular: false,
   },
@@ -313,7 +329,32 @@ export const commentData: CommentDTO[] = [
   {
     id: '1',
     videoId: '1',
-    content: 'Bla Bla',
+    content: 'Awesome video!',
     uploader: channelData.find((c) => c.id === '4')!,
+  },
+];
+
+export const qnaData: QnADTO[] = [
+  {
+    id: '1',
+    channelId: '1',
+    content: 'How handle this?',
+    uploader: channelData.find((c) => c.id === '5')!,
+    replies: [
+      {
+        id: '2',
+        channelId: '1',
+        content: 'Just do it!',
+        uploader: channelData.find((c) => c.id === '1')!,
+        replies: [],
+      },
+    ],
+  },
+  {
+    id: '3',
+    channelId: '1',
+    content: 'How are you?',
+    uploader: channelData.find((c) => c.id === '4')!,
+    replies: [],
   },
 ];

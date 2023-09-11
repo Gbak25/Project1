@@ -42,16 +42,18 @@ export function CommentInput(props: CommentInputProps): JSX.Element {
         onChange={onInputChange}
         placeholder="text your comment"
       />
-      <Flex justify="end">
+      <Flex justify="end" gap="3" mt="4">
         <MButton
           label="Cancel"
           onClick={onCancelClick}
           backgroundColor={palette.neutral._2}
+          styles={{ borderRadius: '99px', color: '#000' }}
         />
         <MButton
           label="Comments"
           onClick={onSaveClick}
           backgroundColor={palette.primary._6}
+          styles={{ borderRadius: '99px' }}
         />
       </Flex>
     </Flex>

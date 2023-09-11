@@ -5,4 +5,8 @@ export type CommentListProps = {
 export type CommentItemProps = {
   name: string;
   content: string;
+  replies: {
+    name: string;
+    content: string;
+  }[];
 };

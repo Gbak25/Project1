@@ -4,18 +4,15 @@ export const VideoWrapper = styled.div({
   position: 'relative',
   display: 'flex',
   flexDirection: 'column',
-  width: '80%',
+  width: '60%',
 
   '@media (max-width: 600px)': {
     width: '100%',
   },
 });
 
-export const RecommendedWrapper = styled.div({
-  position: 'relative',
-  display: 'flex',
-  flexDirection: 'column',
-  width: '20%',
+export const RecommendedContainer = styled.div({
+  width: '35%',
 
   '@media (max-width: 600px)': {
     width: '100%',

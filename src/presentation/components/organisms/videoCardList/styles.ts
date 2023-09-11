@@ -4,7 +4,6 @@ export const VideoCardWrapper = styled.div({
   width: '32.3%',
   position: 'relative',
   cursor: 'pointer',
-  height: 300,
 
   '@media (max-width: 600px)': {
     width: '100%',

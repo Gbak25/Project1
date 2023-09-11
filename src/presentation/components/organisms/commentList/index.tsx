@@ -5,7 +5,11 @@ import type { CommentListProps } from './types';
 export function CommentList(props: CommentListProps): JSX.Element {
   const { children } = props;
 
-  return <Flex direction="column">{children}</Flex>;
+  return (
+    <Flex direction="column" mt="6">
+      {children}
+    </Flex>
+  );
 }
 
 CommentList.Item = CommentItem;
