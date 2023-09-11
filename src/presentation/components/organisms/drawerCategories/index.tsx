@@ -1,5 +1,4 @@
 import 'react-modern-drawer/dist/index.css';
-import { useCheckDevice } from '@application/hooks/use_check_device';
 import { useGetCategories } from '@application/hooks/use_get_data';
 import { drawerCategoriesAtom } from '@application/recoils/drawer/drawer_atoms';
 import { searchKeywordAtom } from '@application/recoils/navMenu/atoms';
@@ -13,7 +12,6 @@ export function DrawerCategories(): JSX.Element {
   const setSearchKeyword = useSetRecoilState(searchKeywordAtom);
   const { data } = useGetCategories();
   const router = useRouter();
-  const isMobile = useCheckDevice();
 
   return (
     <Drawer
